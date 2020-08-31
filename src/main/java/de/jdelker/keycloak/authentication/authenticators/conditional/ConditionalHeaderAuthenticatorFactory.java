@@ -43,6 +43,10 @@ public class ConditionalHeaderAuthenticatorFactory implements ConditionalAuthent
           .label("Required Header Expression")
           .helpText("Regular expression that must match request headers to execute this flow.")
           .type(ProviderConfigProperty.STRING_TYPE).add()
+          .property().name(CONDITIONAL_HEADER_INVERSION)
+          .label("Expression Inversion")
+          .helpText("Inverse match result")
+          .type(ProviderConfigProperty.BOOLEAN_TYPE).add()
           .build()
   );
 

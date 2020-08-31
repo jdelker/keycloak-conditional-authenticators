@@ -45,8 +45,9 @@ public class ConditionalHeaderAuthenticator implements ConditionalAuthenticator 
     MultivaluedMap<String, String> requestHeaders = context.getHttpRequest().getHttpHeaders().getRequestHeaders();
     if (user != null && authConfig != null && authConfig.getConfig() != null) {
       String headerExpression = authConfig.getConfig().get(ConditionalHeaderAuthenticatorFactory.CONDITIONAL_HEADER_EXPRESSION);
+      boolean resultInversion = Boolean.valueOf(authConfig.getConfig().get(ConditionalHeaderAuthenticatorFactory.CONDITIONAL_HEADER_INVERSION));
 
-      return containsMatchingRequestHeader(requestHeaders, headerExpression);
+      return containsMatchingRequestHeader(requestHeaders, headerExpression) ^ resultInversion;
     }
     return false;
   }
