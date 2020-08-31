@@ -32,14 +32,16 @@ import org.keycloak.provider.ProviderConfigurationBuilder;
 public class ConditionalHeaderAuthenticatorFactory implements ConditionalAuthenticatorFactory {
 
   public static final String PROVIDER_ID = "conditional-headers";
-  public static final String PROVIDER_DISPLAY = "Condition - headers";
-  public static final String PROVIDER_HELP = "Regular expression that must match request headers to execute this flow.";
+  public static final String PROVIDER_DISPLAY = "Condition - Request Headers";
+  public static final String PROVIDER_HELP = "Conditional Authenticator which matches request headers";
 
   protected static final String CONDITIONAL_HEADER_EXPRESSION = "condHeaderExpression";
+  protected static final String CONDITIONAL_HEADER_INVERSION = "condHeaderInversion";
 
   private static final List<ProviderConfigProperty> commonConfig = Collections.unmodifiableList(ProviderConfigurationBuilder.create()
-          .property().name(CONDITIONAL_HEADER_EXPRESSION).label("Required Header Expression")
-          .helpText(PROVIDER_HELP)
+          .property().name(CONDITIONAL_HEADER_EXPRESSION)
+          .label("Required Header Expression")
+          .helpText("Regular expression that must match request headers to execute this flow.")
           .type(ProviderConfigProperty.STRING_TYPE).add()
           .build()
   );

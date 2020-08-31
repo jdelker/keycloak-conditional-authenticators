@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 import javax.ws.rs.core.MultivaluedMap;
-import jdk.internal.joptsimple.internal.Strings;
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.authenticators.conditional.ConditionalAuthenticator;
@@ -31,7 +30,7 @@ import org.keycloak.models.UserModel;
 
 /**
  * Conditional Header Authenticator for Keycloak.
- * 
+ *
  * Checks the request headers for matching a given expression
  */
 public class ConditionalHeaderAuthenticator implements ConditionalAuthenticator {
@@ -74,7 +73,7 @@ public class ConditionalHeaderAuthenticator implements ConditionalAuthenticator 
 
   private boolean containsMatchingRequestHeader(MultivaluedMap<String, String> requestHeaders, String headerPattern) {
 
-    if (headerPattern==null || headerPattern.isEmpty() || requestHeaders.isEmpty()) {
+    if (headerPattern == null || headerPattern.isEmpty() || requestHeaders.isEmpty()) {
       return false;
     }
 
