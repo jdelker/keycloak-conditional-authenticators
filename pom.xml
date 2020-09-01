@@ -8,6 +8,7 @@
     <name>KeycloakConditionalAuthenticators</name>
     
     <packaging>jar</packaging>
+    
     <dependencies>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -28,23 +29,16 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     
-<!--    <build>
-       <plugins>
-           <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.2.1.Final</version>
-                <configuration>
-                    <skip>false</skip>
-                </configuration>
-            </plugin>
-       </plugins>
-    </build>-->
-    
+    <scm>
+        <connection>scm:git:https://github.com/jdelker/keycloak-conditional-authenticators.git</connection>
+        <developerConnection>scm:git:git@github.com:jdelker/keycloak-conditional-authenticators.git</developerConnection>
+        <url>https://github.com/jdelker/keycloak-conditional-authenticators</url>
+    </scm>
 </project>
