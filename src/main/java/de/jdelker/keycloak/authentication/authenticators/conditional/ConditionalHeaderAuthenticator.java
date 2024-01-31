@@ -19,7 +19,7 @@ package de.jdelker.keycloak.authentication.authenticators.conditional;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-import javax.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.MultivaluedMap;
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.authenticators.conditional.ConditionalAuthenticator;

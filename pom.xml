@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.delker.keycloak</groupId>
     <artifactId>KeycloakConditionalAuthenticators</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-custom</version>
     
     <name>KeycloakConditionalAuthenticators</name>
     
@@ -13,21 +13,26 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>18.0.0</version>
+            <version>23.0.5</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi</artifactId>
-            <version>11.0.1</version>
+            <version>23.0.5</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi-private</artifactId>
-            <version>11.0.1</version>
+            <version>23.0.5</version>
             <scope>provided</scope>
         </dependency>
+	<dependency>
+	    <groupId>javax.ws.rs</groupId>
+	    <artifactId>javax.ws.rs-api</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
     </dependencies>
     
     <properties>
